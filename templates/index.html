@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Summarization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
     <form action="{{url_for('Summarize')}}" method="post">
-        <textarea name="data" cols="30" rows="10" placeholder="Enter your Data" required="required"></textarea>
+        <h3 class="text-center">Summarized Text</h3>
+        <div class="form-outline text-center" data-mdb-input-init>
+            <textarea name="data" cols="100" rows="10" placeholder="Enter your Data" required="required"></textarea>
+        </div>
         <input type="range" min="20" max="1000" name= "maxl" value="100">
-        <button type="submit">Submit</button>
+        <div class="text-center">
+            <button type="button" class="btn btn-danger">Clear</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 
-    <h3>Summarized Text</h3>
-    <textarea name="result" id="" cols="30" rows="10">{{result}}</textarea>
+    <h3 class="text-center">Summarized Text</h3>
+    <div class="form-outline text-center" data-mdb-input-init>
+        <textarea name="result" cols="100" rows="10" >{{result}}</textarea>
+    </div>
 </body>
 </html>

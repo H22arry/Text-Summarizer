@@ -15,7 +15,7 @@ def Summarize():
 
         data = req.form["data"]
 
-        minl= 30#int(input()) # for taking user input
+        minl= 50#int(input()) # for taking user input
         maxl= int(req.form["maxl"])#int(input())
         def query(payload):
 	        response = requests.post(API_URL, headers=headers, json=payload)
